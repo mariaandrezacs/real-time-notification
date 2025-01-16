@@ -91,7 +91,9 @@ def payment_pix_page(payment_id):
 def handle_connect():
     print("Client connected to the server")
 
-
+@socketio.on('disconnect')
+def handle_disconnect():
+    print("Client has disconnect to the server")
 
 
 
